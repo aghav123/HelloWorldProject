@@ -10,7 +10,7 @@ pipeline {
         
         stage('Deploy to Tomcat') {
             steps {
-                sh 'sudo cp /var/lib/jenkins/.m2/repository/com/example/HelloWorldProject/1.0.0/HelloWorldProject-1.0.0.jar  /var/lib/tomcat9/webapps'
+                sh 'sudo -S cp /var/lib/jenkins/.m2/repository/com/example/HelloWorldProject/1.0.0/HelloWorldProject-1.0.0.jar  /var/lib/tomcat9/webapps'
             }
         }
         
