@@ -17,8 +17,7 @@ pipeline {
         stage('Restart Tomcat') {
             steps {
                 // Restart Tomcat
-                sh '/path/to/tomcat/bin/shutdown.sh'
-                sh '/path/to/tomcat/bin/startup.sh'
+                sh 'systemctl restart tomcat9.service'
             }
         }
     }
